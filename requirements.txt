@@ -1,5 +1,5 @@
 streamlit==1.23.1
-torch==2.0.1
+torch==2.2.2  # Updated version compatible with Python 3.12
 diffusers==0.16.0
 Pillow==9.4.0
 transformers==4.28.1
