@@ -21,7 +21,7 @@ st.write("Generate a funny image with any quirky prompt!")
 
 prompt = st.text_input(
     "Enter your image prompt",
-    "A cartoon heart wearing sunglasses, holding a bouquet of roses, riding a skateboard through a cloud of chocolate kisses, with a love-struck penguin in the background trying to keep up, all under a neon sign that says 'Be Mine' in a comic style."
+    "baby deadpool"
 )
 
 
