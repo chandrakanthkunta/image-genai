@@ -1,5 +1,6 @@
 streamlit
 diffusers
-torch==2.0.1+cu118
+torch
 transformers
-pillow
+accelerate
+Pillow
