@@ -7,7 +7,7 @@ from io import BytesIO
 
 model_id = "runwayml/stable-diffusion-v1-5"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
-pipe.to("cpu")  # Use GPU for faster generation
+pipe.to("cuda")  # Use GPU for faster generation
 
 
 def generate_image(prompt):
