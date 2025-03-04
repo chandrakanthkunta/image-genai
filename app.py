@@ -4,26 +4,19 @@ import torch
 from PIL import Image
 from io import BytesIO
 
-
+# Load model for CPU
 model_id = "runwayml/stable-diffusion-v1-5"
-pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
-pipe.to("cuda")  # Use GPU for faster generation
-
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float32)
+pipe.to("cpu")  # Use CPU for inference
 
 def generate_image(prompt):
     image = pipe(prompt).images[0]  # Generate the image
     return image
 
-
 st.title("Funny Image Generator")
 st.write("Generate a funny image with any quirky prompt!")
 
-
-prompt = st.text_input(
-    "Enter your image prompt",
-    "baby deadpool"
-)
-
+prompt = st.text_input("Enter your image prompt", "baby deadpool")
 
 if st.button("Generate Image"):
     if prompt:  # Check if the prompt is not empty
